@@ -1,3 +1,5 @@
+-- TP1 Alexis DA CUNHA MIGUEL 
+
 -- EXERCICE 1 -- 
 
 -- Dans un premier temps, nous créons le répertoire elections
@@ -77,13 +79,13 @@ VALUES ('Marc', 'toto4');
 
 -- // 1. Quel parti politique a réuni le plus de voix ?
 
-# 1er méthode qui n'est pas optimisée --
+-- 1er méthode qui n'est pas optimisée 
 
 SELECT * FROM Candidat WHERE parti_politique = 'A';
 SELECT * FROM Candidat WHERE parti_politique = 'B';
 SELECT * FROM Candidat WHERE parti_politique = 'C'; 
 
-# 2eme méthode optimisée
+-- 2eme méthode optimisée
 
 Select  parti_politique, sum(nbr_vote) from candidat group by parti_politique; 
 
